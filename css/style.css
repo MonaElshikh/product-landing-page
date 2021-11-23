@@ -1,0 +1,225 @@
+/****************************************************** Start Global ******************************************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-padding: 25px;
+  --main-margin: 50px;
+  --main-color: #f1c40f;
+  --bg-color: #ddd;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+}
+main {
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  padding-left: calc(var(--main-padding) + 25px);
+  padding-right: calc(var(--main-padding) + 25px);
+  position: relative;
+}
+/****************************************************** End Global ******************************************************/
+/****************************************************** Start Header ******************************************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: calc(var(--main-padding) - 5px) var(--main-padding);
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px auto;
+}
+.logo > img {
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+header > nav {
+  flex-basis: 100%;
+}
+header > nav > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header > nav > ul > li {
+  padding: 5px 0;
+}
+/****************************************************** End Header **********************************************************/
+/****************************************************** Start Landing ******************************************************/
+.container .landding {
+  margin-top: calc(var(--main-margin) + 120px);
+  text-align: center;
+}
+.container .landding > form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.container .landding > form > input[type="email"] {
+  padding: 5px 38px;
+  margin-bottom: 20px;
+}
+.container .landding > form > input[type="submit"] {
+  background-color: var(--main-color);
+  display: block;
+  padding: 5px 25px;
+  font-weight: bold;
+  font-size: 20px;
+  border: transparent;
+  cursor: pointer;
+}
+/****************************************************** End Landing ******************************************************/
+/****************************************************** Start Features ***************************************************/
+.container .features {
+  text-align: center;
+  margin-top: var(--main-margin);
+}
+.container .features > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.container .features > ul > li .icon {
+  display: flex;
+  justify-content: center;
+  flex-basis: 60px;
+}
+.container .features > ul > li .icon svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--main-color);
+}
+.container .features > ul > li .data > h2,
+.container .features > ul > li .data > p {
+  margin: 0;
+}
+/****************************************************** End Features *****************************************************/
+/****************************************************** Start How it works ***********************************************/
+.how-it-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--main-margin);
+}
+.how-it-work > iframe {
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+}
+/****************************************************** End How it works ***********************************************/
+/****************************************************** Start Pricing ******************************************************/
+.pricing {
+  margin-top: var(--main-margin);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+.pricing .plan {
+  border: solid 1px black;
+  border-radius: 5px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.pricing .plan > h2 {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+}
+.pricing .plan > p {
+  padding: 20px 40px;
+}
+.pricing .plan > button {
+  padding: 10px 30px;
+  background-color: var(--main-color);
+  border: transparent;
+}
+/****************************************************** End Pricing ******************************************************/
+/* Start Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: var(--main-margin);
+  padding: 20px 15px 10px;
+  background-color: var(--bg-color);
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+footer > ul > li {
+  padding: 0 10px;
+}
+footer > p {
+  color: #444;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* End Footer */
+/****************************************************** Start Media ******************************************************/
+@media (min-width: 767px) {
+  header {
+    flex-direction: row;
+  }
+  header > nav {
+    flex-basis: 40%;
+  }
+  header > nav > ul {
+    flex-direction: row;
+  }
+  .container .landding {
+    margin-top: calc(var(--main-margin) + 20px);
+  }
+  .container .features {
+    text-align: left;
+    margin-top: calc(var(--main-margin) + 20px);
+  }
+  .container .features > ul > li {
+    flex-direction: row;
+  }
+  .container .features > ul > li .icon {
+    flex-basis: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  header > nav > ul > li {
+    padding: 0 12px;
+  }
+}
+@media (min-width: 1200px) {
+  header > nav > ul > li {
+    padding: 0 40px;
+  }
+}
+/****************************************************** End Media ******************************************************/

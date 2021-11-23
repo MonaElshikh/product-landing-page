@@ -9,13 +9,14 @@
   --main-margin: 50px;
   --main-color: #f1c40f;
   --bg-color: #ddd;
+  --body-bg-color: #eee;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  background-color: #eee;
+  background-color: var(--body-bg-color);
   font-family: "Lato", sans-serif;
 }
 main {
@@ -39,6 +40,7 @@ a {
 /****************************************************** Start Header ******************************************************/
 header {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   display: flex;
@@ -46,6 +48,7 @@ header {
   justify-content: space-between;
   min-height: 60px;
   padding: calc(var(--main-padding) - 5px) var(--main-padding);
+  background-color: var(--body-bg-color);
 }
 header .logo {
   display: flex;
